@@ -50,7 +50,7 @@ def render_svg(svg_file):
         html = f'<img src="data:image/svg+xml;base64,{b64}"/>'
         return html
 # Streamlit app
-st.title('Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
+st.title('##Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
 # Displaying the dynamic SVG banner
 st.markdown(
     """
