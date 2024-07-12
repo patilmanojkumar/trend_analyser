@@ -51,7 +51,11 @@ def render_svg(svg_file):
         return html
 # Streamlit app
 st.set_page_config(layout="wide")
-st.title('Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
+st.markdown(
+    "<h1 style='text-align: center;'>Trend Analyser by <a href='https://github.com/patilmanojkumar'>Manojkumar Patil</a></h1>",
+    unsafe_allow_html=True
+)
+#st.title('Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
 # Displaying the dynamic SVG banner
 st.markdown(
     """
