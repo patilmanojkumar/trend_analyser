@@ -4,6 +4,7 @@ import numpy as np
 from math import sqrt
 import statsmodels.api as sm
 from statsmodels.formula.api import ols
+import base64
 
 # Function to compute CAGR and p-value
 def compute_cagr(data, column):
@@ -40,7 +41,14 @@ def compute_statistics(data, column):
 def compute_cdvi(cv, adj_r_squared):
     cdvi = cv * sqrt(1 - adj_r_squared)
     return cdvi
-
+ef render_svg(svg_file):
+    """Renders the given SVG file as a base64 encoded image."""
+    with open(svg_file, "r") as f:
+        svg = f.read()
+        
+        b64 = base64.b64encode(svg.encode("utf-8")).decode("utf-8")
+        html = f'<img src="data:image/svg+xml;base64,{b64}"/>'
+        return html
 # Streamlit app
 st.title('Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
 # Displaying the dynamic SVG banner
