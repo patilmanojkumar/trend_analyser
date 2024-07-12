@@ -69,5 +69,5 @@ if uploaded_file:
         st.write(f"Standard Deviation: {std_val:.2f}")
         st.write(f"Coefficient of Variation (CV): {cv_val:.2f}")
         st.write(f"Adjusted R Square: {adj_r_squared:.2f}")
-        st.write(f"Coefficient of Determination of Variation Index (CDVI): {cdvi:.2f}")
+        st.write(f"Cuddy Della Valle Index (CDVI): {cdvi:.2f}")
 
