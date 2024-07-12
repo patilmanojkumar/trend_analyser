@@ -33,7 +33,7 @@ def compute_cagr(data, column):
 def compute_statistics(data, column):
     mean_val = data[column].mean()
     std_val = data[column].std()
-    cv_val = std_val / mean_val
+    cv_val = (std_val / mean_val)*100
     return mean_val, std_val, cv_val
 
 # Function to compute CDVI
@@ -61,9 +61,10 @@ if uploaded_file:
         cdvi = compute_cdvi(cv_val, adj_r_squared)
         
         st.write(f"CAGR: {cagr:.2%}")
-        st.write(f"P-Value: {p_value:.5f}")
+        st.write(f"P-Value: {p_value:.10f}")
         st.write(f"Mean: {mean_val:.2f}")
         st.write(f"Standard Deviation: {std_val:.2f}")
         st.write(f"Coefficient of Variation (CV): {cv_val:.2f}")
+        st.write(f"Adjusted R Square: {adj_r_squared:.2f}")
         st.write(f"Coefficient of Determination of Variation Index (CDVI): {cdvi:.2f}")
 
