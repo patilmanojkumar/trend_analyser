@@ -45,10 +45,13 @@ def compute_cdvi(cv, adj_r_squared):
 st.title('Trend Analyser')
 
 # File upload
-uploaded_file = st.file_uploader("Upload a CSV file", type=["csv"])
+uploaded_file = st.file_uploader("Upload a CSV, XLSX, or XLS file", type=["csv", "xlsx", "xls"])
 
 if uploaded_file:
-    data = pd.read_csv(uploaded_file)
+    if uploaded_file.name.endswith('.csv'):
+        data = pd.read_csv(uploaded_file)
+    elif uploaded_file.name.endswith('.xlsx') or uploaded_file.name.endswith('.xls'):
+        data = pd.read_excel(uploaded_file)
     
     st.write("Data Preview:")
     st.write(data.head())
