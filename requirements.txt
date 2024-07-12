@@ -1,2 +1,3 @@
 statsmodels
 pandas
+openpyxl
