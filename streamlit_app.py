@@ -41,7 +41,7 @@ def compute_statistics(data, column):
 def compute_cdvi(cv, adj_r_squared):
     cdvi = cv * sqrt(1 - adj_r_squared)
     return cdvi
-ef render_svg(svg_file):
+def render_svg(svg_file):
     """Renders the given SVG file as a base64 encoded image."""
     with open(svg_file, "r") as f:
         svg = f.read()
