@@ -67,5 +67,3 @@ if uploaded_file:
         st.write(f"Coefficient of Variation (CV): {cv_val:.2f}")
         st.write(f"Coefficient of Determination of Variation Index (CDVI): {cdvi:.2f}")
 
-if __name__ == '__main__':
-    st._run()
