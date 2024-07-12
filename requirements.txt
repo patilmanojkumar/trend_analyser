@@ -1,3 +1,2 @@
-math
 statsmodels
 pandas
