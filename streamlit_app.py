@@ -43,6 +43,17 @@ def compute_cdvi(cv, adj_r_squared):
 
 # Streamlit app
 st.title('Trend Analyser by [Manojkumar Patil](https://github.com/patilmanojkumar)')
+# Displaying the SVG banner
+st.markdown(
+    """
+    <p align="center">
+      <a href="https://github.com/DenverCoder1/readme-typing-svg">
+        <img src="https://readme-typing-svg.herokuapp.com?font=Time+New+Roman&color=yellow&size=30&center=true&vCenter=true&width=600&height=100&lines=Trend+Analysis+Made+Simple!;trend_analyser-1.0;">
+      </a>
+    </p>
+    """,
+    unsafe_allow_html=True
+)
 
 # File upload
 uploaded_file = st.file_uploader("Upload a CSV, XLSX, or XLS file", type=["csv", "xlsx", "xls"])
