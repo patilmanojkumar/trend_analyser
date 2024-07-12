@@ -1,2 +1,2 @@
-# trend_analyser
-## Link to [Streamlit APP](https://trendanalyser.streamlit.app/)
+# Trend_analyser
+## Link to [Streamlit Application](https://trendanalyser.streamlit.app/)
